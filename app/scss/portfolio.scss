@@ -1,0 +1,74 @@
+@import "_variables.scss";
+
+.portfolio {
+    width: $grid;
+    margin: 60px auto 75px;
+    padding: 0 12%;
+    @media (max-width: 1023px) {
+        width: 100%;
+        padding: 0 8%;
+    }
+    &__views {
+        text-align: center;
+        margin-bottom: 82px;
+        .views {
+            padding: 0 1.2%;
+        }
+    }
+    .header__menu {
+        width: 55%;
+        margin: 0 auto 82px;
+        @media (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+    &-images {
+        margin: 1rem auto;
+        width: 100%;
+        padding: 0 20px 20px;
+        box-sizing: border-box;
+        column-count: 3;
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+        @media (max-width: 767px) {
+            columns: 2;
+        }
+        @media (max-width: 480px) {
+            columns: 1;
+        }
+        &__item {
+            margin: 0 0 20px 0;
+            text-align: center;
+            max-width: 100%;
+            filter: opacity(70%);
+            break-inside: avoid;
+            page-break-inside: avoid;
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+            &:hover {
+                transition: 0.5s ease;
+                filter: opacity(100%);
+            }
+        }
+    }
+    &__button {
+        text-align: center;
+        margin-top: 40px;
+        .button {
+            padding: 12px 28px;
+            background-color: $color-ff5672;
+            color: $color-ffffff;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                background-color: $color-ffffff;
+                color: $color-ff5672;
+                border: 1px solid $color-ff5672;
+            }
+        }
+    }
+}
+

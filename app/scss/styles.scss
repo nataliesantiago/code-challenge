@@ -1,0 +1,90 @@
+@import "_variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.grid {
+    max-width: $grid;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__menu {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .option__menu {
+            cursor: pointer;
+            color: $color-707070;
+            padding: 10px 2vw;
+            &--active,
+            &:hover {
+                color: $color-ffffff;
+                background-color: $color-ff5672;
+                padding: 10px 2vw;
+            }
+        }
+    }
+    span {
+        margin-left: 5%;
+    }
+    .close {
+        display: none;
+    }
+    @media (max-width: 1023px) {
+        margin-top: 30px;
+        &.mobile {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            background-color: #ffffff;
+            display: none;
+            padding: 20px;
+            z-index: 9;
+            .menu {
+                display: block;
+                margin: 10px 0;
+            }
+            .close {
+                display: block;
+                position: absolute;
+                right: 3vw;
+                top: 0px;
+            }
+        }
+    }
+}
+
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+@import "header.scss";
+@import "banner.scss";
+@import "portfolio.scss";
+@import "footer.scss";
